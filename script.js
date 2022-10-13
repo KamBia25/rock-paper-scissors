@@ -9,29 +9,42 @@ function playRound(playerSelection, computerSelection) {
    computerSelection = computerChoice;
    console.log(computerSelection)
    console.log(playerSelection)
-   if (playerSelection == computerSelection){
+
+if(playerSelection=="rock"){
+   if (computerSelection=="paper"){
+      console.log("lose")
+   }
+   else if(computerSelection=="scissors"){
+      console.log("win")
+   }
+   else{
       console.log("draw")
    }
-   if (playerSelection =! computerSelection)
-   {
-      if(playerSelection.toLowerCase() == "rock"|| computerSelection == "paper"){
-         console.log("defeat")
-      else
-      }
-      if(playerSelection.toLowerCase() == "rock"|| computerSelection == "scissors"){
-         console.log("victory")
-      }
-      if(playerSelection.toLowerCase() == "paper"|| computerSelection == "scissors"){
-         console.log("defeat")
-      }
-      if(playerSelection.toLowerCase() == "paper"|| computerSelection == "rock"){
-         console.log("victory")
-      }
-      if(playerSelection.toLowerCase() == "scissors"|| computerSelection == "rock"){
-         console.log("defeat")
-      }
-      if(playerSelection.toLowerCase() == "scissors"|| computerSelection == "paper"){
-         console.log("victory")
-      }
+}
+if(playerSelection=="paper"){
+   if (computerSelection=="scissors"){
+      console.log("lose")
    }
-  }
+   else if(computerSelection=="rock"){
+      console.log("win")
+   }
+   else{
+      console.log("draw")
+   }
+}
+
+if(playerSelection=="scissors"){
+   if (computerSelection=="rock"){
+      console.log("lose")
+   }
+   else if(computerSelection=="paper"){
+      console.log("win")
+   }
+   else{
+      console.log("draw")
+   }
+}
+
+
+   }
+  
