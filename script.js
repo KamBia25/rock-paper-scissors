@@ -16,6 +16,7 @@ function playRound(playerSelection, computerSelection) {
    {
       if(playerSelection.toLowerCase() == "rock"|| computerSelection == "paper"){
          console.log("defeat")
+      else
       }
       if(playerSelection.toLowerCase() == "rock"|| computerSelection == "scissors"){
          console.log("victory")
