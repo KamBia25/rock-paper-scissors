@@ -10,7 +10,7 @@ function playRound(playerSelection, computerSelection) {
    console.log(computerSelection)
    console.log(playerSelection)
 
-if(playerSelection=="rock"){
+if(playerSelection.toLowerCase()=="rock"){
    if (computerSelection=="paper"){
       console.log("lose")
    }
@@ -21,7 +21,7 @@ if(playerSelection=="rock"){
       console.log("draw")
    }
 }
-if(playerSelection=="paper"){
+if(playerSelection.toLowerCase()=="paper"){
    if (computerSelection=="scissors"){
       console.log("lose")
    }
@@ -33,7 +33,7 @@ if(playerSelection=="paper"){
    }
 }
 
-if(playerSelection=="scissors"){
+if(playerSelection.toLowerCase()=="scissors"){
    if (computerSelection=="rock"){
       console.log("lose")
    }
