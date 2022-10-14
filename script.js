@@ -1,4 +1,4 @@
-var computerChoice
+var computerChoice;
 function getComputerChoice() {
 const gameTools = ["rock","paper","scissors"];
 computerChoice = gameTools[Math.floor(Math.random()*gameTools.length)];
@@ -7,44 +7,50 @@ console.log(computerChoice);
 function playRound(playerSelection, computerSelection) {
    playerSelection = prompt("Write which one you want to play[rock, paper, scissors]:");
    computerSelection = computerChoice;
-   console.log(computerSelection)
-   console.log(playerSelection)
+   var gameStatus = "";
+   console.log(computerSelection);
+   console.log(playerSelection);
 
 if(playerSelection.toLowerCase()=="rock"){
    if (computerSelection=="paper"){
-      console.log("lose")
+      gameStatus="lose";
+      console.log(gameStatus);
    }
    else if(computerSelection=="scissors"){
-      console.log("win")
+      gameStatus="win";
+      console.log(gameStatus);
    }
    else{
-      console.log("draw")
+      console.log("draw");
    }
 }
 if(playerSelection.toLowerCase()=="paper"){
    if (computerSelection=="scissors"){
-      console.log("lose")
+      gameStatus="lose";
+      console.log(gameStatus);
    }
    else if(computerSelection=="rock"){
-      console.log("win")
+      gameStatus="win";
+      console.log(gameStatus);
    }
    else{
-      console.log("draw")
+      console.log("draw");
    }
 }
 
 if(playerSelection.toLowerCase()=="scissors"){
    if (computerSelection=="rock"){
-      console.log("lose")
+      gameStatus="lose";
+      console.log(gameStatus);
    }
    else if(computerSelection=="paper"){
-      console.log("win")
+      gameStatus="win";
+      console.log(gameStatus);
    }
    else{
-      console.log("draw")
+      console.log("draw");
    }
 }
 
-
+return gameStatus;
    }
-  
