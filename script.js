@@ -7,7 +7,7 @@ console.log(computerChoice);
 function playRound(playerSelection, computerSelection) {
    playerSelection = prompt("Write which one you want to play[rock, paper, scissors]:");
    computerSelection = computerChoice;
-   var gameStatus = "";
+   let gameStatus;
 
 if(playerSelection.toLowerCase()=="rock"){
    if (computerSelection=="paper"){
@@ -47,31 +47,40 @@ if(playerSelection.toLowerCase()=="scissors"){
    }
    else{
       console.log("draw");
+      gameStatus="draw"
    }
 }
-
 return gameStatus;
    }
 function game(){
-   var gameStatus  = "";
    let playerStatus = 0; 
    let computerStatus = 0;
-   for (let computerStatus=0; playerStatus<=3 || computerStatus<=3;){
+
+   for (let i=0; i<=5;){
       getComputerChoice();
-      playRound();
-      if(gameStatus =="win"){
+      let gameOutput = playRound();
+      if(gameOutput == "win"){
       playerStatus+=1;
+      if (playerStatus==3){
+         break;
       }
-      else if (gameStatus =="lose"){
+      }
+      else if (gameOutput == "lose"){
       computerStatus+=1;
+      if (computerStatus==3){
+         break;
       }
-      else
-      continue;   
+      }
+      else{
+      continue;
+      }   
    }
    if (playerStatus > computerStatus){
    console.log("Player wins best of 5")
+   winner = "player";
    }
    else{
       console.log("Computer wins best of 5")
+      winner = "computer";
    }
 }
