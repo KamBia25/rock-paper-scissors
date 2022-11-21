@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    background-image: url('backgroundImage.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+button {
+    display: flex;
+}
+div  {
+    display: flex;
+
+}
