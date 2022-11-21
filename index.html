@@ -8,9 +8,49 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script>
-        game()
+    
+    <button id="rock">ROCK</button>
+    <button id="paper">PAPER</button>
+    <button id="scissors">SCISSORS</button>
+    <div id="gameScore">Player: 0 Computer: 0</div>
+        <script>
+   let playerStatus = 0; 
+   let computerStatus = 0;
+    const gameScore = document.querySelector('#gameScore');
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
 
-    </script>
+      button.addEventListener('click', () => {
+        
+         playRound((button.id));
+         gameScore.textContent = `Player: ${playerStatus} Computer: ${computerStatus} `;
+         if(gameStatus =="win"){
+            playerStatus += 1;
+         }
+         if(gameStatus =="lose"){
+            computerStatus += 1;
+         }
+         if(playerStatus==3){
+            document.getElementById("rock").disabled = true;
+            document.getElementById("paper").disabled = true;
+            document.getElementById("scissors").disabled = true;
+            gameScore.textContent = `Player wins!`;
+         }
+         if(computerStatus==3){
+            document.getElementById("rock").disabled = true;
+            document.getElementById("paper").disabled = true;
+            document.getElementById("scissors").disabled = true;
+            gameScore.textContent = `Computer wins!`;
+         }
+            
+            
+            
+});
+});
+      
+     
+
+
+        </script>
 </body>
 </html>
