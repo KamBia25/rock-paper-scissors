@@ -9,12 +9,13 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+   <div id="gameScore">Player: 0 Computer: 0</div>
    <div>
       <button id="rock">ROCK</button>
       <button id="paper">PAPER</button>
       <button id="scissors">SCISSORS</button>
    </div> 
-        <div id="gameScore">Player: 0 Computer: 0</div>
+       
         <script>
    let playerStatus = 0; 
    let computerStatus = 0;
@@ -25,13 +26,15 @@
       button.addEventListener('click', () => {
         
          playRound((button.id));
-         gameScore.textContent = `Player: ${playerStatus} Computer: ${computerStatus} `;
+         
+         
          if(gameStatus =="win"){
             playerStatus += 1;
          }
          if(gameStatus =="lose"){
             computerStatus += 1;
          }
+         gameScore.textContent = `Player: ${playerStatus} Computer: ${computerStatus} `;
          if(playerStatus==3){
             document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
