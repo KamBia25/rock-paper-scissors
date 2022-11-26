@@ -11,7 +11,7 @@ body {
     background-size: cover;
     background-size: 100% 100%;
 }
-button {
+.buttons {
     display: flex;
     padding: 8px 24px;
     border-radius: 8px;
